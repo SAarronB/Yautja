@@ -23,11 +23,17 @@ public class YautjaController
 	}
 //-----------------------------CONSTRUCTOR SECTION----------------------------
 
+	
+//-------------------------------METHOD SECTION-------------------------------
+	/**
+	 * Programs start here by calling methods and running them.
+	 */
 	public void start() 
 	{
 	
 		
 		
 	}
-	
+//-------------------------------METHOD SECTION-------------------------------
+
 }
