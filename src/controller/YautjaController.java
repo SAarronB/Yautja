@@ -44,17 +44,20 @@ public class YautjaController
 		
 		boolean isDone = false;
 		int count = 0;
+		
+//Better to keep track of how many times something happens
 		while (!isDone) 
 		{
 			
 			JOptionPane.showMessageDialog(null, "THE PREDATOR IS RUNNING!!!!");
-			
-			
+		
 			//Eventually change the loop variable
 			count++;
+			
 			//Oboe -- this mean that when you start to count it will take zero into a count.
-			if (count > 10)
+			if (count >= 10)
 			{
+				//updated Variable
 				isDone = true;
 			}
 			
