@@ -20,6 +20,7 @@ public class YautjaController
 		myPredator = new pepeThePredator("Pepe The Predator",
 				2, true, true, 2, 2, 4);
 		
+		
 	}
 //-----------------------------CONSTRUCTOR SECTION----------------------------
 
@@ -31,7 +32,33 @@ public class YautjaController
 	public void start() 
 	{
 	
+		running();
 		
+	}
+	
+	/**
+	 * Only the controller can call this object cause its private
+	 */
+	private void running() 
+	{
+		
+		boolean isDone = false;
+		int count = 0;
+		while (!isDone) 
+		{
+			
+			JOptionPane.showMessageDialog(null, "THE PREDATOR IS RUNNING!!!!");
+			
+			
+			//Eventually change the loop variable
+			count++;
+			//Oboe -- this mean that when you start to count it will take zero into a count.
+			if (count > 10)
+			{
+				isDone = true;
+			}
+			
+		}
 		
 	}
 //-------------------------------METHOD SECTION-------------------------------
