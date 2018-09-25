@@ -37,6 +37,24 @@ public class YautjaController
 		
 	}
 	
+	
+	//checks for a double
+	public boolean validDouble(String maybeDouble) 
+
+	{
+		boolean isValid = false;
+		
+		try {
+			Double.parseDouble(maybeDouble);
+			isValid = true;
+		} catch(NumberFormatException error){
+			JOptionPane.showMessageDialog(null, "The Double Try didnt work, input a Double.");
+		}
+		return isValid;
+	}
+	
+	
+	
 	/**
 	 * Only the controller can call this object cause its private
 	 */
@@ -63,6 +81,11 @@ public class YautjaController
 			
 		}
 		
+		//For loops: is here, sets loop to 0. then checks is loop is less than 30, runs message, then adds 2
+		for (int loop = 0; loop < 30; loop += 2) {
+			JOptionPane.showMessageDialog(null, "The Loop Value Is: " + loop);
+		}
+		
 	}
 	
 	private void Action() 
@@ -85,6 +108,16 @@ public class YautjaController
 			}
 		
 		}
+	}
+	
+	private void userInput()
+	{
+		
+		String answer = JOptionPane.showInputDialog(null, "What is the distance of the Predator!?!");
+		while(!validDouble(answer)) {
+			answer = JOptionPane.showInputDialog(null, "You Have to Guess!! Dont Give UP!!!");
+		}
+		
 	}
 //-------------------------------METHOD SECTION-------------------------------
 
