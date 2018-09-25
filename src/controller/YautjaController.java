@@ -6,133 +6,141 @@ import model.pepeThePredator;
 public class YautjaController
 {
 
-//----------------------------DATA MEMBERS-----------------------------------
+	// ----------------------------DATA MEMBERS-----------------------------------
 	private pepeThePredator myPredator;
-//----------------------------DATA MEMBERS-----------------------------------
-	
-//-----------------------------CONSTRUCTOR SECTION----------------------------
+	// ----------------------------DATA MEMBERS-----------------------------------
+
+	// -----------------------------CONSTRUCTOR SECTION----------------------------
 	/**
 	 * Builds the instance of the Controller
 	 */
 	public YautjaController()
 	{
-		
-		//myPredator = new pepeThePredator("Pepe The Predator",
-				//2, true, true, 2, 2, 4);
-		
-		
-	}
-//-----------------------------CONSTRUCTOR SECTION----------------------------
 
-	
-//-------------------------------METHOD SECTION-------------------------------
+		// myPredator = new pepeThePredator("Pepe The Predator",
+		// 2, true, true, 2, 2, 4);
+
+	}
+	// -----------------------------CONSTRUCTOR SECTION----------------------------
+
+	// -------------------------------METHOD SECTION-------------------------------
 	/**
 	 * Programs start here by calling methods and running them.
 	 */
-	public void start() 
+	public void start()
 	{
-	
+
 		Action();
 		Jump();
 		userInput();
 	}
-	
-	
-	//Checks for a int
-	public boolean validInt(String maybeInt){
+
+	// Checks for a int
+	public boolean validInt(String maybeInt)
+	{
 		boolean isValid = false;
-		try {
+		try
+		{
 			Integer.parseInt(maybeInt);
 			isValid = true;
-		}catch(NumberFormatException error) {
+		}
+		catch (NumberFormatException error)
+		{
 			JOptionPane.showMessageDialog(null, "The Try Didnt work, type an Int");
 		}
 		return isValid;
 	}
-	
-	
-	//checks for a double
-	public boolean validDouble(String maybeDouble) 
+
+	// checks for a double
+	public boolean validDouble(String maybeDouble)
 
 	{
 		boolean isValid = false;
-		
-		try {
+
+		try
+		{
 			Double.parseDouble(maybeDouble);
 			isValid = true;
-		} catch(NumberFormatException error){
+		}
+		catch (NumberFormatException error)
+		{
 			JOptionPane.showMessageDialog(null, "The Double Try didnt work, input a Double.");
 		}
 		return isValid;
 	}
-	
-	
-	
+
 	/**
 	 * Only the controller can call this object cause its private
 	 */
-	private void Jump() 
+	private void Jump()
 	{
-		
+
 		boolean isDone = false;
 		int count = 0;
-		
-//Better to keep track of how many times something happens
-		while (!isDone) 
+
+		// Better to keep track of how many times something happens
+		while (!isDone)
 		{
 			JOptionPane.showMessageDialog(null, "THE PREDATOR IS IN THE AIR!!!!");
-			
-			//Eventually change the loop variable
+
+			// Eventually change the loop variable
 			count++;
-			
-			//Oboe -- this mean that when you start to count it will take zero into a count.
+
+			// Oboe -- this mean that when you start to count it will take zero into a
+			// count.
 			if (count >= 1)
 			{
-				//updated Variable
+				// updated Variable
 				isDone = true;
 			}
-			
+
 		}
-		
-		//For loops: is here, sets loop to 0. then checks is loop is less than 30, runs message, then adds 2
-		for (int loop = 0; loop < 30; loop += 2) {
+
+		// For loops: is here, sets loop to 0. then checks is loop is less than 30, runs
+		// message, then adds 2
+		for (int loop = 0; loop < 30; loop += 2)
+		{
 			JOptionPane.showMessageDialog(null, "The Loop Value Is: " + loop);
 		}
-		
+
 	}
-	
-	private void Action() 
+
+	private void Action()
 	{
-		
+
 		Boolean onGround = true;
 		int time = 0;
-		
-		while(onGround)
+
+		while (onGround)
 		{
-		
+
 			JOptionPane.showMessageDialog(null, "PREDATOR IS IN THE SHADOWS WAITING TO STRIKE!!!!");
-			
+
 			time++;
-			if(time >= 5)
+			if (time >= 5)
 			{
 				JOptionPane.showMessageDialog(null, "THE PREDATOR IS RUNNING!!!!");
-				
+
 				onGround = false;
 			}
-		
+
 		}
 	}
-	
+
 	private void userInput()
 	{
-		
+		// Ask
 		String answer = JOptionPane.showInputDialog(null, "What is the distance of the Predator!?!");
 		pepeThePredator predator = new pepeThePredator(answer, 0, false, false, 0, 0, 0);
-		while(!validDouble(answer)) {
+		
+		// repeat until finished correctly
+		while (!validDouble(answer))
+		{
 			answer = JOptionPane.showInputDialog(null, "You Have to Guess!! Dont Give UP!!!");
 		}
+		// assigns and converts
 		pepeThePredator.setDistance(Double.parseDouble(answer));
 	}
-//-------------------------------METHOD SECTION-------------------------------
+	// -------------------------------METHOD SECTION-------------------------------
 
 }
