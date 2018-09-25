@@ -15,6 +15,7 @@ public class pepeThePredator
 	private int eyeCount;
 	private int armCount;
 	private int mandibles;
+	private double setDistance;
 //------------------DATA MEMEBERS-----------------------
 
 //-------------------CONSTRUCTORS----------------------
@@ -38,6 +39,7 @@ public class pepeThePredator
 		this.eyeCount = eyeCount;
 		this.armCount = armCount;
 		this.mandibles = mandibles;
+		this.setDistance = setDistance;
 //-------------DEFAULT----------------
 
 	}
@@ -69,6 +71,11 @@ public class pepeThePredator
 	public void seteyeCount(int eyeCount)
 	{
 		this.eyeCount = eyeCount;
+	}
+
+	public static void setDistance(double setDistance)
+	{
+		
 	}
 	
 }

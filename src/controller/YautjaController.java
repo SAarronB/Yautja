@@ -17,8 +17,8 @@ public class YautjaController
 	public YautjaController()
 	{
 		
-		myPredator = new pepeThePredator("Pepe The Predator",
-				2, true, true, 2, 2, 4);
+		//myPredator = new pepeThePredator("Pepe The Predator",
+				//2, true, true, 2, 2, 4);
 		
 		
 	}
@@ -34,7 +34,20 @@ public class YautjaController
 	
 		Action();
 		Jump();
-		
+		userInput();
+	}
+	
+	
+	//Checks for a int
+	public boolean validInt(String maybeInt){
+		boolean isValid = false;
+		try {
+			Integer.parseInt(maybeInt);
+			isValid = true;
+		}catch(NumberFormatException error) {
+			JOptionPane.showMessageDialog(null, "The Try Didnt work, type an Int");
+		}
+		return isValid;
 	}
 	
 	
@@ -114,10 +127,11 @@ public class YautjaController
 	{
 		
 		String answer = JOptionPane.showInputDialog(null, "What is the distance of the Predator!?!");
+		pepeThePredator predator = new pepeThePredator(answer, 0, false, false, 0, 0, 0);
 		while(!validDouble(answer)) {
 			answer = JOptionPane.showInputDialog(null, "You Have to Guess!! Dont Give UP!!!");
 		}
-		
+		pepeThePredator.setDistance(Double.parseDouble(answer));
 	}
 //-------------------------------METHOD SECTION-------------------------------
 
