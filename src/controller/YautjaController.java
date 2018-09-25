@@ -32,14 +32,15 @@ public class YautjaController
 	public void start() 
 	{
 	
-		running();
+		Action();
+		Jump();
 		
 	}
 	
 	/**
 	 * Only the controller can call this object cause its private
 	 */
-	private void running() 
+	private void Jump() 
 	{
 		
 		boolean isDone = false;
@@ -48,14 +49,13 @@ public class YautjaController
 //Better to keep track of how many times something happens
 		while (!isDone) 
 		{
+			JOptionPane.showMessageDialog(null, "THE PREDATOR IS IN THE AIR!!!!");
 			
-			JOptionPane.showMessageDialog(null, "THE PREDATOR IS RUNNING!!!!");
-		
 			//Eventually change the loop variable
 			count++;
 			
 			//Oboe -- this mean that when you start to count it will take zero into a count.
-			if (count >= 10)
+			if (count >= 1)
 			{
 				//updated Variable
 				isDone = true;
@@ -63,6 +63,28 @@ public class YautjaController
 			
 		}
 		
+	}
+	
+	private void Action() 
+	{
+		
+		Boolean onGround = true;
+		int time = 0;
+		
+		while(onGround)
+		{
+		
+			JOptionPane.showMessageDialog(null, "PREDATOR IS IN THE SHADOWS WAITING TO STRIKE!!!!");
+			
+			time++;
+			if(time >= 5)
+			{
+				JOptionPane.showMessageDialog(null, "THE PREDATOR IS RUNNING!!!!");
+				
+				onGround = false;
+			}
+		
+		}
 	}
 //-------------------------------METHOD SECTION-------------------------------
 
