@@ -75,5 +75,11 @@ public class pepeThePredator
 	{
 
 	}
+	
+	public String toString() {
+		String description = "The Predator jumped " + setDistance;
+				description += " Feet." + "The predator attacked you";
+				return description;
+	}
 
 }

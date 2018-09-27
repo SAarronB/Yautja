@@ -98,13 +98,15 @@ public class YautjaController
 
 		// For loops: is here, sets loop to 0. then checks is loop is less than 30, runs
 		// message, then adds 2
-		for (int loop = 0; loop < 30; loop += 2)
+		for (int loop = 30; loop > 0; loop -= 5)
 		{
-			JOptionPane.showMessageDialog(null, "The Loop Value Is: " + loop);
+			userInput();
+			JOptionPane.showMessageDialog(null, "This is the " + loop + "'th run object i made");
 		}
 
 	}
 
+	
 	private void Action()
 	{
 
@@ -134,12 +136,21 @@ public class YautjaController
 		pepeThePredator predator = new pepeThePredator(answer, 0, false, false, 0, 0, 0);
 		
 		// repeat until finished correctly
+		//While loops must change a variable at the end
 		while (!validDouble(answer))
 		{
 			answer = JOptionPane.showInputDialog(null, "You Have to Guess!! Dont Give UP!!!");
 		}
 		// assigns and converts
 		pepeThePredator.setDistance(Double.parseDouble(answer));
+		
+		answer = JOptionPane.showInputDialog(null, "what did the predator attack with?");
+		if(answer == null || answer.equals("")) {
+			JOptionPane.showMessageDialog(null, "You Either pressed cancel, the X or typed nothing >:[");
+			
+			
+		}
+	
 	}
 	// -------------------------------METHOD SECTION-------------------------------
 
