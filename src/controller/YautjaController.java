@@ -147,10 +147,9 @@ public class YautjaController
 		answer = JOptionPane.showInputDialog(null, "what did the predator attack with?");
 		if(answer == null || answer.equals("")) {
 			JOptionPane.showMessageDialog(null, "You Either pressed cancel, the X or typed nothing >:[");
-			
-			
 		}
-	
+	JOptionPane.showMessageDialog(null, predator);
+		
 	}
 	// -------------------------------METHOD SECTION-------------------------------
 
