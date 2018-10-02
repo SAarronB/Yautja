@@ -29,7 +29,7 @@ public class YautjaController
 	 */
 	public void start()
 	{
-
+		Loop();
 		Action();
 		Jump();
 		userInput();
@@ -150,6 +150,29 @@ public class YautjaController
 		}
 	JOptionPane.showMessageDialog(null, predator);
 		
+	}
+	
+	public Integer Loop() {
+		int number ;
+		number = Integer.parseInt(JOptionPane.showInputDialog(null,"Input a Number"));
+		while(number<100){
+			JOptionPane.showMessageDialog(null, "The Number is Less Than 100");
+			if(number == 1) {
+				JOptionPane.showMessageDialog(null, "The Number is 1");
+				number = number + 4;
+				number = number + number/2;
+			}else if(number <=50){
+				JOptionPane.showMessageDialog(null, "The Number is Less or Equal to 50");
+				number = number + number/2;
+				JOptionPane.showMessageDialog(null, number);
+			}else{
+				JOptionPane.showMessageDialog(null, "The Number is greater than 50");
+				number = number + number/2;
+				JOptionPane.showMessageDialog(null, number);
+			}
+			
+		}
+		return number;
 	}
 	// -------------------------------METHOD SECTION-------------------------------
 
