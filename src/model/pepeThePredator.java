@@ -1,6 +1,6 @@
 package model;
 
-public class pepeThePredator
+public class PepeThePredator
 {
 	// ------------------DATA MEMEBERS-----------------------
 
@@ -15,7 +15,7 @@ public class pepeThePredator
 	private int eyeCount;
 	private int armCount;
 	private int mandibles;
-	private double setDistance;
+	private double distance;
 	// ------------------DATA MEMEBERS-----------------------
 
 	// -------------------CONSTRUCTORS----------------------
@@ -24,7 +24,7 @@ public class pepeThePredator
 	 * info yet about pepeThePredator. But for now I have Custom Default Value for
 	 * DATA MEMBERS INITIALIZING DATA MEMBERS WITH "BAD" VALUES TO BE CHANGED
 	 */
-	public pepeThePredator(String name, double legCount, boolean armor, boolean weapons, int eyeCount, int armCount, int mandibles)
+	public PepeThePredator(String name, double legCount, boolean armor, boolean weapons, int eyeCount, int armCount, int mandibles, double distance)
 	{
 
 		// -------------DEFAULT----------------
@@ -36,9 +36,23 @@ public class pepeThePredator
 		this.eyeCount = eyeCount;
 		this.armCount = armCount;
 		this.mandibles = mandibles;
-		this.setDistance = setDistance;
+		this.distance = distance;
 		// -------------DEFAULT----------------
 
+	}
+	
+	public double getDistance()
+	{
+		return distance;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public void getName(String name) {
+		this.name = name;
 	}
 
 	public void setName(String name)
@@ -71,13 +85,13 @@ public class pepeThePredator
 		this.eyeCount = eyeCount;
 	}
 
-	public static void setDistance(double setDistance)
+	public void setDistance(double distance)
 	{
-
+		this.distance = distance;
 	}
 	
 	public String toString() {
-		String description = "The Predator jumped " + setDistance;
+		String description = "The Predator jumped " + distance;
 				description += " Feet." + "The predator attacked you";
 				return description;
 	}

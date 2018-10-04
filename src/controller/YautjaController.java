@@ -1,13 +1,14 @@
 package controller;
 
 import javax.swing.JOptionPane;
-import model.pepeThePredator;
+import model.PepeThePredator;
+import java.util.ArrayList;
 
 public class YautjaController
 {
 
 	// ----------------------------DATA MEMBERS-----------------------------------
-	private pepeThePredator myPredator;
+	private PepeThePredator myPredator;
 	// ----------------------------DATA MEMBERS-----------------------------------
 
 	// -----------------------------CONSTRUCTOR SECTION----------------------------
@@ -106,6 +107,28 @@ public class YautjaController
 
 	}
 
+	private void lotsOfGainz() 
+	{
+	//Local variable are only visible in the method they are defined in!
+	//They only have SCOPE to; that method
+		
+		ArrayList<PepeThePredator> myGainz = new ArrayList<PepeThePredator>();
+		
+		PepeThePredator moreGainz = new PepeThePredator(null, 0, false, false, 0, 0, 0, 0);
+		PepeThePredator sampleGainz = new PepeThePredator(null, 0, false, false, 0, 0, 0, 0);
+		
+		myGainz.add(sampleGainz);
+		myGainz.add(moreGainz);
+		
+		for(int index = 0; index < myGainz.size(); index += 1) {
+			PepeThePredator currentGainz = myGainz.get(index);
+			currentGainz.setDistance(index * currentGainz.getDistance());
+		}
+		
+		for(PepeThePredator current : myGainz) {
+			JOptionPane.showMessageDialog(null, "the Gainz method is Named: " + current.getName());
+		}
+	}
 	
 	private void Action()
 	{
@@ -133,7 +156,7 @@ public class YautjaController
 	{
 		// Ask
 		String answer = JOptionPane.showInputDialog(null, "What is the distance of the Predator!?!");
-		pepeThePredator predator = new pepeThePredator(answer, 0, false, false, 0, 0, 0);
+		PepeThePredator predator = new PepeThePredator(answer, 0, false, false, 0, 0, 0, 0);
 		
 		// repeat until finished correctly
 		//While loops must change a variable at the end
@@ -142,7 +165,7 @@ public class YautjaController
 			answer = JOptionPane.showInputDialog(null, "You Have to Guess!! Dont Give UP!!!");
 		}
 		// assigns and converts
-		pepeThePredator.setDistance(Double.parseDouble(answer));
+		predator.setDistance(Double.parseDouble(answer));
 		
 		answer = JOptionPane.showInputDialog(null, "what did the predator attack with?");
 		if(answer == null || answer.equals("")) {
