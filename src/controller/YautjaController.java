@@ -128,6 +128,20 @@ public class YautjaController
 		for(PepeThePredator current : myGainz) {
 			JOptionPane.showMessageDialog(null, "the Gainz method is Named: " + current.getName());
 		}
+		
+		//for(int index = myGainz.size() - 1; index>=0; index -=1){
+		//this for loop runs backward, it starts off by initiatinig index to the size of the list - 1.
+		//then it then goes from highest to lowest going down by one.
+		//Run currentRun = myRuns.get(index);
+		//jOptionPane.showMessageDialog(currentRun);
+		//}
+		//replace data=========.set
+		//add data=============.add
+		//clear all data=======.clear
+		//get data=============.get
+		
+		
+		
 	}
 	
 	private void Action()
