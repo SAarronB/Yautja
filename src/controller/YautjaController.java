@@ -3,6 +3,8 @@ package controller;
 import javax.swing.JOptionPane;
 import model.PepeThePredator;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
 
 public class YautjaController
 {
@@ -211,6 +213,13 @@ public class YautjaController
 		}
 		return number;
 	}
+	
+	ArrayList<PepeThePredator> foodList = new ArrayList<PepeThePredator>();
+	
+	PepeThePredator main = new PepeThePredator(null, 0, false, false, 0, 0, 0, 0);
+	PepeThePredator sides = new PepeThePredator(null, 0, false, false, 0, 0, 0, 0);
+
+	
 	// -------------------------------METHOD SECTION-------------------------------
 
 }
