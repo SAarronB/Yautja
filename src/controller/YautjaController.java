@@ -214,12 +214,33 @@ public class YautjaController
 		return number;
 	}
 	
-	ArrayList<PepeThePredator> foodList = new ArrayList<PepeThePredator>();
+	private void predatorFood(){
+		/**
+	 	*This starts the arraylist and names it foodlist
+		*/
+		ArrayList<PepeThePredator> foodList = new ArrayList<PepeThePredator>();
 	
-	PepeThePredator main = new PepeThePredator(null, 0, false, false, 0, 0, 0, 0);
-	PepeThePredator sides = new PepeThePredator(null, 0, false, false, 0, 0, 0, 0);
-
-	
+		/**
+		 * This sets up main
+		 */
+		PepeThePredator main = new PepeThePredator(null, 0, false, false, 0, 0, 0, 0);
+		
+		/**
+		 * this sets up sides
+		 */
+		PepeThePredator sides = new PepeThePredator(null, 0, false, false, 0, 0, 0, 0);
+		
+		/**
+		 * addes main to foodList
+		 */
+		foodList.add(main);
+		
+		/**
+		 * addes sides to foodList
+		 */
+		foodList.add(sides);
+		
+	}
 	// -------------------------------METHOD SECTION-------------------------------
 
 }

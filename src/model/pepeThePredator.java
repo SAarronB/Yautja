@@ -10,10 +10,7 @@ public class PepeThePredator
 	// OBJECTS => NULL!!
 	private String name;
 	private String foodSide;
-	private String foodSide2;
 	private String foodMain;
-	private String foodMain2;
-	private String foodMain3;
 	private double legCount;
 	private boolean armor;
 	private boolean weapons;
@@ -50,20 +47,8 @@ public class PepeThePredator
 		return foodMain;
 	}
 	
-	public String foodMain2() {
-		return foodMain2;
-	}
-	
-	public String foodMain3() {
-		return foodMain3;
-	}
-	
 	public String foodSide() {
 		return foodSide;
-	}
-	
-	public String foodSide2() {
-		return foodSide2;
 	}
 	
 	public double getDistance()
