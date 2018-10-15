@@ -209,7 +209,7 @@ public class YautjaController
 				number = number + number/2;
 				JOptionPane.showMessageDialog(null, number);
 			}
-			
+			 
 		}
 		return number;
 	}
